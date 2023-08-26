@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+}
+
+.loader {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.loader_bar {
+    display: inline-block;
+    width: 10px;
+    height: 40px;
+    background: #080808;
+    border-radius: 10px;
+    opacity: 0.5;
+    animation: scale-up 1000ms var(--d) linear infinite;
+}
+
+.loader_bar:nth-child(even) {
+    height: 25px;
+}
+
+.loader_bar:nth-child(3) {
+    height: 50px;
+}
+
+@keyframes scale-up {
+    25% {
+        opacity: 1;
+        scale: 1 1.5;
+    }
+
+    50% {
+        scale: 1;
+    }
+}
